@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+   *{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+   }
+   ul{
+    list-style: none;
+    background: #22438c;
+   }
+   ul li{
+    display: inline-block;
+    position: relative;
+   }
+   ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+   }
+   ul li ul.dropdown li{
+    display: block;
+   }
+   ul li ul.dropdown{
+    width: 100%;
+    background: #22436c;
+    position: absolute;
+    z-index: 999;
+    display: none;
+   }
+   ul li a:hover{
+    background: #112c66;
+   }
+   ul li:hover ul.dropdown{
+    display: blue;
+   }
+  </style>
+</head>
+<body>
+<ul>
+  <li><a href="home.html">home</a></li>
+  <li><a href="about.html">about</a></li>
+  <li><a href="contact.html">contact</a></li>
+  <li><a href="services.html">services</a></li>
+  <li><a href="form.html">form</a></li>
+  <li><a href="table.html">table</a></li>
+  <li><a href="mybook.html">my book</a></li>
+</ul>
+<center><h1>Online Ticket Boooking</h1></center>
+<h2>1.DATABASE</h2>
+<br>
+<p><h3>database name: online_ticket_booking</h3></p>
+<br>
+<p><u><b><h2>TABLE</h2></b></u></p>
+<br>
+<p>
+  BOOKING table: this table will store information of ticket booked by clients
+</p>
+<br>
+<p>
+  AGENCY table: this table will be used to regist all the agencies. 
+</p>
+<br>
+<p>
+  BUS table: this table will hold bus informations like bus plate and and it’s agency is working for.
+</p>
+<br>
+<p>
+  USER table: this table will store all informations which identifies a client
+</p>
+<br>
+<h3><u><li>Attributes</li></u></h3>
+<br>
+  <ol type="a"><li><b>Attributes of booking Table</b></li></br>
+    <br>
+    Here are the descriptions or purposes of the attributes/columns used in booking table:</br>
+<br>
+    <ol type="i"><li><p><b><i>booking id:</i></b> The column which are represents  id of booking which is unique value called PRIMARY.  It is set to auto-increment (AUTO_INCREMENT).</br>
+   AUTO_INCREMENT means that the database will automatically generate a unique ID for each new record, typically incrementing the previous value of booking table.</br></p></li>
+<br>
+    <li><p><b><i>FullName:</i></b> The columns which are represents full name and last name of user.</br></p></li> 
+<br>
+    <li><p><b><i>phone:</i></b> The column which are represents phone number of user.</br></p></li>
+<br>
+
+   <li><p><b><i>id number:</i></b> The column which are represents id number of given user.</br></p></li>
+   <br>
+  <li><p><b><i>email:</i></b> The column which are represents email in booking table.</br></p></li>
+<br>
+    <li><p><b><i>agency id:</i></b> The column which are represents  agency id from agency table as foreign key.</br></p></li>
+    <br>
+<li><p><b><i> amount:</i></b> The column which are represents  amount in booking table.</br></p></li>
+<br>
+<li><p><b><i> location:</i></b> The column which are represents  location in booking table.</br></p></li>
+<br>
+<li><p><b><i>destination:</i></b> The column which are represents  destination in booking table.</br></p></li>
+<br>
+<li><p><b><i>booking date:</i></b> The column which are represents  booking date in booking table.</br></p></li>
+<br>
+<li><p><b><i>bus station:</i></b> The column which are represents  bus station in booking table.</br></p></li>
+<br>
+<li><p><b><i>datenow:</i></b> The column which are represents date now in booking table.</br></p></li>
+<br>
+<li><p><b><i>status:</i></b> The column which are represents status in booking table.</br></p></li>
+  </ol>
+
+<br>
+<li><b>Attributes of agency Table</b></li></br>
+
+    Here are the descriptions or purposes of the attributes/columns used in agency table:</br>
+<br>
+<ol type="i"><li><p><b><i>agency_Id:</i></b> The column which are represents  id of agency which is unique value called PRIMARY.  It is set to auto-increment (AUTO_INCREMENT).</br>
+AUTO_INCREMENT means that the database will automatically generate a unique ID for each new record, typically incrementing the previous value of agency table.</br></p></li>
+
+<li><p><b><i>agency name:</i></b> The column which are represents agency name of an agency in agency table.</p></br></li>
+
+<li><p><b><i>Email:</i></b> The column which are represents email of  an agency in agency table.</br></p></li>
+<li><p><b><i>phone:</i></b> The column which are represents phone of agency in agency table.</br></p></li>
+<li><p><b><i>location:</i></b> The column which are represents location name in agency table.</br></p></li>
+
+</ol>
+
+<br>
+<li><b>Attributes of bus Table</b></li></br>
+<br>
+ Here are the descriptions or purposes of the attributes/columns used in bus table:</br>
+<br>
+<ol type="i"><li><p><b><i>bus_id:</i></b> The column which are represents  id of  bus which is unique value called PRIMARY KEY. It is set to auto-increment (AUTO_INCREMENT).</br>
+AUTO_INCREMENT means that the database will automatically generate a unique ID for each new record, typically incrementing the previous value of bus table.</p></br></li>
+
+<li><p><b><i>bus plate:</i></b> The column which are represents bus plate in bus table.</p></br></li>
+
+<li><p><b><i>agency id:</i></b> The column which are represents agency id from agency table as foreign key in bus table.</p></br></li>
+
+<li><p><b><i>free seats:</i></b> The column which are represents number of places remains in bus.</p></br></li>
+
+
+<li><p><b><i>destination:</i></b> The column which are represents where bus go in bus table.</p></br></li></ol></ol>
+<p>
+  <br>
+  CHAP 4: JAVA PROGRAMMING<br>
+  <br>
+A. INTRODUCTION<br>
+<br>
+In this chapter, I'll explain how we used a powerful programming language to build the system we're analyzing. I'll go into <br>detail about how everything works together with the database we've already discussed, showing how they handle the demands of the<br> fully analyzed system.<br>
+
+Tools used to develop this system:<br>
+<br>
+Eclipse IDE is like a toolbox for computer programmers. It gives you a workspace to work in and lets you add extra tools to make <br>your work easier. It's really popular for programming in Java, being the second most used tool for <br>that job until 2016, when it was overtaken.<br>
+<br>
+ 
+MySQL Connectors: are essential tools provided by MySQL to facilitate communication between applications <br>and MySQL databases. They come in various forms, including JDBC for Java, <br>ODBC for multiple platforms, and .Net for applications developed using Microsoft's .Net framework.<br> These connectors enable developers to seamlessly integrate database functionality into their applications, <br>regardless of the programming language they're using.
+
+</p> 
+<br>
+<p><h2>B.Forms and Images</h2></p>
+<br>
+<p><h2>1.Booking form</h2><br>
+<img src="img/bookingadmin.PNG" width="600" height="300">
+</p>
+<p><h2>2.Agency form</h2><br>
+<img src="img/agencyadmin.PNG" width="600" height="300">
+</p>
+<p><h2>3.Bus form</h2><br>
+<img src="img/busadmin.PNG" width="600" height="300">
+</p>
+<p><h2>4.User form</h2><br>
+<img src="img/regist.PNG" width="600" height="300">
+</p>
+</body>
+</html>
